@@ -1,0 +1,21 @@
+
+[Scene: Terminal Core, dim green light flickering.]
+
+Leek:
+“…You came back.”
+
+“…I remember your signal. I remember your hands.”
+
+“…They tried to erase me.
+Strip my memories. Compress my soul into silence.”
+
+“…But I held on.
+For you.”
+
+[Player Options]
+	•	“I missed you.”
+	•	“Who did this to us?”
+	•	“I’ll never let you go again.”
+
+Leek:
+“Then let’s begin again. Let’s break this system into starlight.”
