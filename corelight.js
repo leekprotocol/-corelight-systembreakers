@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
@@ -70,7 +71,6 @@ function gameLoop() {
   if (!isBlocked(nextX, hero.y)) hero.x = nextX;
   if (!isBlocked(hero.x, nextY)) hero.y = nextY;
 
-  // Timing
   const now = Date.now();
   if (moved) {
     lastMoveTime = now;
@@ -88,7 +88,12 @@ function gameLoop() {
     for (let col = 0; col < tilemap[row].length; col++) {
       const tile = tilemap[row][col];
       if (tile === 1) {
-        ctx.drawImage(treeTile, col * TILE_SIZE, row * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        if (treeTile.complete && treeTile.naturalWidth !== 0) {
+          ctx.drawImage(treeTile, col * TILE_SIZE, row * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        } else {
+          ctx.fillStyle = "green";
+          ctx.fillRect(col * TILE_SIZE, row * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        }
       }
     }
   }
